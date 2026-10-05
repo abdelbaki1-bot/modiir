@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#073d32">
+  <meta name="description" content="متجر MODiiR للهواتف والإكسسوارات والعطور والهدايا والورد والحلويات.">
+  <title>MODiiR | متجر متنوع</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="products.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="announcement-bar" aria-label="معلومات المتجر">
+    <span><span class="announcement-mark">✦</span> منتجات مختارة بعناية</span>
+    <span class="announcement-divider" aria-hidden="true"></span>
+    <span>الطلب متاح عبر واتساب</span>
+    <span class="announcement-divider" aria-hidden="true"></span>
+    <span>هواتف، عطور وهدايا</span>
+  </div>
+
+  <header class="site-header">
+    <div class="header-main page-shell">
+      <a class="brand" href="#home" aria-label="MODiiR - الرئيسية">MODiiR</a>
+      <form class="search-form" id="search-form" role="search">
+        <label class="visually-hidden" for="search-input">ابحث عن منتج</label>
+        <input id="search-input" type="search" placeholder="ابحث عن منتج أو صنف..." autocomplete="off">
+        <button class="search-submit icon-button" type="submit" aria-label="بحث" data-icon="search"></button>
+      </form>
+      <div class="header-actions">
+        <button class="header-action" type="button" id="favorites-shortcut" aria-label="عرض المفضلة">
+          <span class="header-icon" data-icon="heart"></span><span>المفضلة</span><b class="action-count" id="favorite-count">0</b>
+        </button>
+        <button class="header-action" type="button" id="cart-open" aria-label="فتح سلة الطلبات">
+          <span class="header-icon" data-icon="cart"></span><span>السلة</span><b class="action-count" id="cart-count">0</b>
+        </button>
+      </div>
+    </div>
+    <nav class="main-nav page-shell" aria-label="التنقل الرئيسي">
+      <button class="all-categories nav-pill" type="button" id="nav-categories"><span data-icon="grid"></span> جميع الأصناف</button>
+      <a class="nav-link active" href="#home">الرئيسية</a>
+      <a class="nav-link" href="#products">المنتجات</a>
+      <a class="nav-link" href="#promos">هدايا ومناسبات</a>
+      <a class="nav-link" href="#newsletter">تواصل معنا</a>
+    </nav>
+  </header>
+
+  <main class="page-shell" id="home">
+    <section class="hero-section" aria-label="واجهة المتجر">
+      <div class="hero-slider" id="hero-slider">
+        <article class="hero-slide is-active" data-slide="0">
+          <div class="hero-copy">
+            <p class="eyebrow">متجر MODiiR</p>
+            <h1>اختياراتك<br>في مكان واحد</h1>
+            <p class="hero-description">هواتف وإكسسوارات وعطور وهدايا، اختر ما تحتاجه واسألنا عن التفاصيل.</p>
+            <a class="button button-gold" href="#products">تصفّح المنتجات <span data-icon="arrow-left"></span></a>
+            <div class="hero-notes" aria-label="أقسام المتجر">
+              <span><i data-icon="phone"></i> هواتف وإكسسوارات</span>
+              <span><i data-icon="bottle"></i> عطور وهدايا</span>
+            </div>
+          </div>
+          <div class="hero-art hero-art-one" aria-label="منتجات من المتجر">
+            <div class="hero-image-phone image-frame"><img src="images/realme-c75.jpg" alt="هاتف Realme C75" loading="eager"></div>
+            <div class="hero-image-perfume image-frame"><img src="images/perfume.jpg" alt="زجاجة عطر" loading="eager"></div>
+            <div class="hero-image-gift image-frame"><img src="images/gift-flowers.png" alt="باقة هدية وورد" loading="eager"></div>
+            <span class="art-orbit orbit-one"></span><span class="art-orbit orbit-two"></span>
+          </div>
+        </article>
+        <article class="hero-slide" data-slide="1" aria-hidden="true">
+          <div class="hero-copy">
+            <p class="eyebrow">قسم العطور</p>
+            <h2>عطور<br>أصلية ومركبة</h2>
+            <p class="hero-description">تصفّح الخيارات المتاحة، وتواصل معنا لمعرفة الروائح والأسعار.</p>
+            <a class="button button-gold" href="#products" data-category-link="عطور">استكشف العطور <span data-icon="arrow-left"></span></a>
+            <div class="hero-notes"><span><i data-icon="bottle"></i> خيارات متنوعة</span><span><i data-icon="gift"></i> مناسبة للإهداء</span></div>
+          </div>
+          <div class="hero-art hero-art-two"><div class="hero-feature-image image-frame"><img src="images/perfume.jpg" alt="عطر مع ورود" loading="lazy"></div><span class="hero-stamp">عطور<br>وهدايا</span></div>
+        </article>
+        <article class="hero-slide" data-slide="2" aria-hidden="true">
+          <div class="hero-copy">
+            <p class="eyebrow">الهدايا والورد</p>
+            <h2>هدية قريبة<br>إلى القلب</h2>
+            <p class="hero-description">باقات ورد وسلال حلويات وهدايا، حسب الخيارات المتوفرة في المتجر.</p>
+            <a class="button button-gold" href="#promos">شاهد الخيارات <span data-icon="arrow-left"></span></a>
+            <div class="hero-notes"><span><i data-icon="flower"></i> باقات ورد</span><span><i data-icon="candy"></i> حلويات وشوكولاتة</span></div>
+          </div>
+          <div class="hero-art hero-art-three"><div class="hero-feature-image image-frame"><img src="images/sweets-basket.jpg" alt="سلة حلويات وشوكولاتة" loading="lazy"></div><div class="hero-small-image image-frame"><img src="images/gold-roses.jpg" alt="ورود في علبة هدية" loading="lazy"></div></div>
+        </article>
+        <div class="hero-controls" aria-label="التحكم في البانر">
+          <button type="button" class="hero-arrow" id="hero-prev" aria-label="الشريحة السابقة"><span data-icon="arrow-right"></span></button>
+          <div class="hero-dots" id="hero-dots" aria-label="شرائح البانر"></div>
+          <button type="button" class="hero-arrow" id="hero-next" aria-label="الشريحة التالية"><span data-icon="arrow-left"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section" id="categories" aria-labelledby="categories-title">
+      <h2 class="visually-hidden" id="categories-title">الأصناف</h2>
+      <div class="category-track" id="category-track"></div>
+    </section>
+
+    <section class="products-section section-block" id="products" aria-labelledby="products-title">
+      <div class="section-heading">
+        <div><h2 id="products-title">منتجات المتجر</h2></div>
+        <div class="section-tools">
+          <span class="filter-status" id="filter-status" aria-live="polite"></span>
+          <button class="text-link" id="show-all-products" type="button">عرض الكل <span data-icon="arrow-left"></span></button>
+          <div class="slider-arrows">
+            <button class="round-arrow" type="button" id="products-prev" aria-label="المنتجات السابقة"><span data-icon="arrow-right"></span></button>
+            <button class="round-arrow" type="button" id="products-next" aria-label="المنتجات التالية"><span data-icon="arrow-left"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="product-viewport" id="product-viewport">
+        <div class="product-track" id="product-track" aria-live="polite"></div>
+      </div>
+      <p class="empty-message" id="products-empty" hidden>لا توجد منتجات مطابقة لهذا البحث.</p>
+    </section>
+
+    <section class="promo-section" id="promos" aria-label="اكتشف أقسام المتجر">
+      <a class="promo-card promo-phone" href="#products" data-category-link="هواتف">
+        <div class="promo-copy"><span class="promo-kicker">هواتف وإكسسوارات</span><h3>هواتف<br>وإكسسوارات</h3><span class="promo-action">تصفّح الهواتف <i data-icon="arrow-left"></i></span></div>
+        <div class="promo-image image-frame"><img src="images/iphone-13-pro-max.jpg" alt="هاتف ذكي" loading="lazy"></div>
+      </a>
+      <a class="promo-card promo-perfume" href="#products" data-category-link="عطور">
+        <div class="promo-copy"><span class="promo-kicker">قسم العطور</span><h3>عطور<br>أصلية ومركبة</h3><span class="promo-action">تصفّح العطور <i data-icon="arrow-left"></i></span></div>
+        <div class="promo-image image-frame"><img src="images/perfume.jpg" alt="عطر" loading="lazy"></div>
+      </a>
+      <a class="promo-card promo-gifts" href="#products" data-category-link="هدايا">
+        <div class="promo-copy"><span class="promo-kicker">هدايا وورد وحلويات</span><h3>هدايا<br>للمناسبات</h3><span class="promo-action">اكتشف الهدايا <i data-icon="arrow-left"></i></span></div>
+        <div class="promo-image image-frame"><img src="images/gift-flowers.png" alt="هدية مع باقة ورد" loading="lazy"></div>
+      </a>
+    </section>
+
+    <section class="reviews-section section-block" id="reviews" aria-labelledby="reviews-title" hidden>
+      <div class="section-heading"><div><p class="eyebrow section-eyebrow">آراء الزبائن</p><h2 id="reviews-title">تجارب من المتجر</h2></div></div>
+      <div class="reviews-track" id="reviews-track"></div>
+    </section>
+
+    <section class="newsletter-section" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="newsletter-mark" data-icon="mail"></div>
+      <div class="newsletter-copy"><p class="eyebrow">ابقَ على اطلاع</p><h2 id="newsletter-title">رسائل المتجر</h2><p>اترك بريدك الإلكتروني للتواصل عند توفر خدمة الاشتراك.</p></div>
+      <form class="newsletter-form" id="newsletter-form">
+        <label class="visually-hidden" for="newsletter-email">البريد الإلكتروني</label>
+        <input id="newsletter-email" type="email" placeholder="أدخل بريدك الإلكتروني" required>
+        <button class="button button-gold" type="submit">تسجيل البريد</button>
+        <small id="newsletter-message" aria-live="polite">لا نرسل رسائل قبل تفعيل خدمة الاشتراك.</small>
+      </form>
+    </section>
+
+    <section class="benefits-strip" aria-label="خدمات المتجر">
+      <div class="benefit"><span data-icon="chat"></span><div><strong>تواصل مباشر</strong><small>للاستفسار عن المنتجات</small></div></div>
+      <div class="benefit"><span data-icon="box"></span><div><strong>أصناف متنوعة</strong><small>هواتف وهدايا وغيرها</small></div></div>
+      <div class="benefit"><span data-icon="clipboard"></span><div><strong>طلب واضح</strong><small>المنتجات والكميات في رسالة</small></div></div>
+      <div class="benefit"><span data-icon="headset"></span><div><strong>نحن هنا للمساعدة</strong><small>تواصل معنا عبر واتساب</small></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main page-shell">
+      <div class="footer-brand-column">
+        <a class="brand brand-footer" href="#home">MODiiR</a>
+        <p>متجر للهواتف والإكسسوارات والعطور والهدايا والورد والحلويات.</p>
+        <div class="social-links" id="social-links" aria-label="روابط التواصل"></div>
+      </div>
+      <div class="footer-column"><h2>المتجر</h2><a href="#categories">الأصناف</a><a href="#products">المنتجات</a><a href="#promos">هدايا ومناسبات</a></div>
+      <div class="footer-column"><h2>خدمة الزبائن</h2><a href="#newsletter">تواصل معنا</a><a href="#products">الاستفسار عن الأسعار</a><a id="footer-whatsapp" href="#">مراسلتنا عبر واتساب</a></div>
+      <div class="footer-column"><h2>معلومات</h2><a href="#home">عن المتجر</a><a href="#newsletter">الخصوصية والاشتراك</a><a href="#home">شروط الاستخدام</a></div>
+    </div>
+    <div class="footer-bottom page-shell"><span>© <span id="current-year"></span> MODiiR. جميع الحقوق محفوظة.</span><span>الدفع والأسعار تُؤكّد عند التواصل مع المتجر.</span></div>
+  </footer>
+
+  <button class="whatsapp-float" id="whatsapp-float" type="button" aria-label="التواصل عبر واتساب"><span data-icon="whatsapp"></span><span>واتساب</span></button>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">طلبك</p><h2 id="cart-title">سلة الطلبات <span id="drawer-count">(0)</span></h2></div><button class="icon-button drawer-close" id="cart-close" type="button" aria-label="إغلاق السلة"><span data-icon="close"></span></button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span data-icon="cart"></span><p>السلة فارغة حاليًا.</p><button class="text-link" type="button" id="continue-shopping">تابع التسوق</button></div>
+    <div class="cart-checkout" id="cart-checkout" hidden>
+      <div class="cart-total-row"><span>المجموع</span><strong id="cart-total">يُحدّد بعد تأكيد الأسعار</strong></div>
+      <label for="customer-name">اسم الزبون</label><input id="customer-name" type="text" autocomplete="name" placeholder="اكتب اسمك" required>
+      <label for="customer-wilaya">الولاية</label><input id="customer-wilaya" type="text" autocomplete="address-level1" placeholder="اكتب الولاية" required>
+      <button class="button button-dark checkout-button" type="button" id="checkout-whatsapp"><span data-icon="whatsapp"></span> إرسال الطلب عبر واتساب</button>
+      <small>سيتم فتح واتساب برسالة جاهزة لمراجعتها وإرسالها.</small>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
